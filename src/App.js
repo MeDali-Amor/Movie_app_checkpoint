@@ -88,9 +88,9 @@ function App() {
   // console.log(newMovie)
   return (
     <div className="App">
-      <NavigationBar movies={movies} getTerm={getTerm} getRate={getRate}/>
-      <MovieList movies={movies} searchTerm={searchTerm} rateSearch={rateSearch}/> 
-      <AddMovie getInput={getInput} />
+      <NavigationBar className="nav" movies={movies} getTerm={getTerm} getRate={getRate}/>
+      <MovieList className="list" movies={movies} searchTerm={searchTerm} rateSearch={rateSearch}/> 
+      <AddMovie className="add-btn" getInput={getInput} />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './navbar.css'
 import ReactStars from 'react-stars'
 import { Navbar, Nav, Form, Button, FormControl } from "react-bootstrap"
 
@@ -15,11 +16,10 @@ export default function NavigationBar({getTerm, getRate}) {
                 <Navbar.Brand href="#home">Movies</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
                 </Nav>
             <Form inline >
-            <ReactStars count={5} onChange={ratingChanged} size={24} color2={'#ffd700'} half={false} />
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={handleSearch} />
+            <ReactStars className="stars" count={5} onChange={ratingChanged} size={24} color2={'#ffd700'} half={false} />
+                <FormControl className="search-bar" type="text" placeholder="Search" className="mr-sm-2" onChange={handleSearch} />
                 <Button variant="outline-info"  onClick={getTerm(searchText)}>Search</Button>
             </Form>
             </Navbar>

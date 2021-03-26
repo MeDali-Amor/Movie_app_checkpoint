@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './add-movie.css'
 import Modal from 'react-bootstrap/Modal'
 import {  Form, Button, FormControl } from "react-bootstrap"
 const AddMovie = ({getInput}) => {
@@ -38,7 +39,7 @@ const AddMovie = ({getInput}) => {
   const handleShow = () => setShow(true);
     return (
          <div>
- <Button variant="primary" onClick={handleShow}>
+ <Button className="add-btn" variant="primary" onClick={handleShow}>
         Add A Movie
       </Button>
 
@@ -47,11 +48,11 @@ const AddMovie = ({getInput}) => {
           <Modal.Title>Add A Movie</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form  >
-                <FormControl type="text" placeholder="Title" className="mr-sm-2" onChange={(e) => setTitleInput(e.target.value)} />
-                <FormControl type="text" placeholder="Description" className="mr-sm-2" onChange={(e) => setDescriptionInput(e.target.value)} />
-                <FormControl type="text" placeholder="Poster URL" className="mr-sm-2" onChange={(e) => setUrlInput(e.target.value)} />
-                <FormControl type="text" placeholder="Rate" className="mr-sm-2" onChange={(e) => setRateInput(e.target.value)} />
+        <Form  className='input-form'>
+                <FormControl className="input-field" type="text" placeholder="Title" className="mr-sm-2" onChange={(e) => setTitleInput(e.target.value)} />
+                <FormControl className="input-field" type="text" placeholder="Description" className="mr-sm-2" onChange={(e) => setDescriptionInput(e.target.value)} />
+                <FormControl className="input-field" type="text" placeholder="Poster URL" className="mr-sm-2" onChange={(e) => setUrlInput(e.target.value)} />
+                <FormControl className="input-field" type="text" placeholder="Rate" className="mr-sm-2" onChange={(e) => setRateInput(e.target.value)} />
             </Form>
         </Modal.Body>
         <Modal.Footer>
